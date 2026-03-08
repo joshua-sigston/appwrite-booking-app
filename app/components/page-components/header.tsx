@@ -15,24 +15,6 @@ export default function Header() {
 }
 
 export function GeneralLinks() {
-  const authLinks = [
-    {
-      title: "Bookings",
-      href: "/bookings",
-    },
-    {
-      title: "Add Room",
-      href: "/add_room",
-    },
-    {
-      title: "My Rooms",
-      href: "/my_rooms",
-    },
-    {
-      title: "Sign Out",
-      href: "/sign_out",
-    },
-  ];
   return (
     <nav className="flex justify-between w-full">
       <Link href="/rooms">Rooms</Link>
