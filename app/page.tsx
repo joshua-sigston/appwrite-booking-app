@@ -7,7 +7,7 @@ export default function Home() {
     <div className="container mx-auto space-y-4">
       <Heading>Available Rooms</Heading>
       {rooms.length > 0 ? (
-        rooms.map((room) => <Card key={room.$id} room={room} />)
+        rooms.map((room) => <Card key={room.$id} room={room} details={false} />)
       ) : (
         <p className="">No rooms found</p>
       )}

@@ -4,9 +4,10 @@ import Link from "next/link";
 
 interface CardProps {
   room: Room;
+  details?: boolean;
 }
 
-export default function Card({ room }: CardProps) {
+export default function Card({ room, details }: CardProps) {
   return (
     <div className="flex justify-between items-center border border-gray-200 rounded-md p-4">
       <div className="flex items-center space-x-4">
@@ -15,7 +16,7 @@ export default function Card({ room }: CardProps) {
           alt={room.name}
           width={200}
           height={200}
-          className="object-cover w-48 h-32 rounded-md flex-shrink-0"
+          className="object-cover w-48 h-32 rounded-md shrink-0"
         />
         <div className="">
           <h3 className="font-bold text-lg">{room.name}</h3>
@@ -32,9 +33,11 @@ export default function Card({ room }: CardProps) {
         </div>
       </div>
       <div className="">
-        <Link href={`/room/${room.$id}`} className="">
-          View Room
-        </Link>
+        {!details && (
+          <Link href={`/room/${room.$id}`} className="">
+            View Room
+          </Link>
+        )}
       </div>
     </div>
   );
