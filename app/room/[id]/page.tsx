@@ -1,4 +1,4 @@
-import Card from "@/app/components/card";
+import Card from "@/components/card";
 import { rooms } from "@/data/data";
 import { Room } from "@/lib/types";
 
@@ -19,7 +19,7 @@ export default async function RoomsPage({ params }: RoomPageProps) {
   }
 
   return (
-    <div>
+    <div className="container mx-auto">
       <Card room={room} details={details} />
     </div>
   );

@@ -1,6 +1,6 @@
 import { rooms } from "@/data/data";
-import Card from "./components/card";
-import Heading from "./components/heading";
+import Card from "../components/card";
+import Heading from "@/components/heading";
 
 export default function Home() {
   return (
